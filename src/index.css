@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom CSS for SweetAlert2 Glow Effect */
+.swal-popup {
+  border: 4px solid #5c53ea;
+  /* Border color */
+  box-shadow: 0 0 10px 4px rgba(92, 83, 234, 0.8);
+  /* Glow effect with color */
+}
+
+.swal-popup .swal-title {
+  color: #5c53ea;
+  /* Title color */
+}
+
+.swal-popup .swal-html-container {
+  color: #333;
+  /* Content text color */
+}
+
+.swal-popup .swal-footer {
+  border-top: 1px solid #5c53ea;
+  /* Optional: add a line at the bottom */
+}
+
+.swal-popup:focus {
+  outline: none;
+  border: 4px solid #2a016a;
+  /* Darker border color on focus */
+  box-shadow: 0 0 15px 5px rgba(42, 1, 106, 0.8);
+  /* Glow effect on focus */
+}
