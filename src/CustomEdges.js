@@ -17,7 +17,7 @@ export const CustomEdge = ({
 }) => {
   const { setEdges } = useReactFlow();
 
-  // Generate the smoothstep path
+  
   const [edgePath, labelX, labelY] = getSmoothStepPath({
     sourceX,
     sourceY,
@@ -27,14 +27,12 @@ export const CustomEdge = ({
     targetPosition,
   });
 
-  // Handle edge deletion
   const handleDelete = () => {
     setEdges((edges) => edges.filter((edge) => edge.id !== id));
   };
 
   return (
     <>
-      {/* Render the smoothstep edge path */}
       <path
         id={id}
         style={{
@@ -47,7 +45,6 @@ export const CustomEdge = ({
         d={edgePath}
         markerEnd={markerEnd}
       />
-      {/* Add a close icon in the middle of the edge */}
       <foreignObject
         width={20}
         height={20}

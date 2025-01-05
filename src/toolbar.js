@@ -7,10 +7,10 @@ import OutputIcon from '@mui/icons-material/Output';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import InfoIcon from '@mui/icons-material/Info';
 import PsychologyIcon from '@mui/icons-material/Psychology';
-import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 import IntegrationInstructionsIcon from '@mui/icons-material/CompareArrows';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
-
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import AppsIcon from '@mui/icons-material/Apps';
 export const PipelineToolbar = () => {
 
     return (
@@ -22,9 +22,10 @@ export const PipelineToolbar = () => {
                 <DraggableNode type='text' label='Text' Icon={TextFieldsIcon} />
                 <DraggableNode type='dummy' label='Dummy' Icon={InfoIcon} />
                 <DraggableNode type='prompt' label='Prompt' Icon={ApiIcon} />
-                <DraggableNode type='openAi' label='OpenAI' Icon={OpenInBrowserIcon} />
+                <DraggableNode type='openAi' label='OpenAI' Icon={AcUnitIcon} />
                 <DraggableNode type='integration' label='Integration' Icon={IntegrationInstructionsIcon} />
                 <DraggableNode type='note' label='Note' Icon={StickyNote2Icon} />
+                <DraggableNode type='sample' label='Sample'  Icon={AppsIcon} />
             </div>
         </div>
     );

@@ -20,6 +20,13 @@ code {
   /* Glow effect with color */
 }
 
+.swal-err-popup {
+  border: 4px solid #f11818;
+  /* Border color */
+  box-shadow: 0 0 10px 4px rgba(231, 26, 26, 0.8);
+  /* Glow effect with color */
+}
+
 .swal-popup .swal-title {
   color: #5c53ea;
   /* Title color */

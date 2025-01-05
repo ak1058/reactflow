@@ -46,7 +46,7 @@
 //   );
 // }
 import React from 'react';
-import { NodeFactory } from './NodeFactory';
+import { NodeFactory } from './nodeUtils/NodeFactory';
 
 export const OutputNode = ({ id, data }) => {
   return <NodeFactory nodeType="OutputNode" id={id} data={data} />;

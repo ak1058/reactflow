@@ -34,7 +34,7 @@
 // }
 
 import React from 'react';
-import { NodeFactory } from './NodeFactory';
+import { NodeFactory } from './nodeUtils/NodeFactory';
 
 export const LLMNode = ({ id, data }) => {
   return <NodeFactory nodeType="LLMNode" id={id} data={data} />;

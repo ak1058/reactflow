@@ -13,7 +13,7 @@ export const SubmitButton = () => {
     }));
 
   const handleSubmit = async (event) => {
-      event.preventDefault(); // Prevent default form submission behavior
+      event.preventDefault(); 
 
       try {
           const response = await axios.post('http://127.0.0.1:8000/pipelines/parse', {
@@ -50,6 +50,10 @@ export const SubmitButton = () => {
           text: 'There was an error processing the pipeline.',
           icon: 'error',
           confirmButtonText: 'Try Again',
+          customClass: {
+          popup: 'swal-err-popup',
+          
+        },
       });
       }
   };

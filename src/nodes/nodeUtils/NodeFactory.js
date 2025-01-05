@@ -4,6 +4,7 @@ import { nodeConfigs } from './NodeConfig';
 import { TextField, InputLabel, FormControl, FormHelperText, Typography, Grid, Paper,IconButton, Checkbox, FormControlLabel, FormLabel, RadioGroup, Radio  } from '@mui/material';
 import NativeSelect from '@mui/material/NativeSelect';
 import CloseIcon from '@mui/icons-material/Close';
+import { useStore } from '../../store';
 
 export const NodeFactory = ({ nodeType, id, data }) => {
   const config = nodeConfigs[nodeType]; // Get the configuration for the node
@@ -48,10 +49,9 @@ export const NodeFactory = ({ nodeType, id, data }) => {
           updatedFieldVariables[fieldLabel] = variableName; // If it doesn't exist, initialize with the variableName
       }
 
-      // If the handle for this variable doesn't exist, create it
       if (!updatedDynamicHandles.some(handle => handle.id === variableName)) {
         const handlePosition = Position.Left;  
-        const topPosition = 50 + (index * 20); 
+        const topPosition = 40 + (index * 18); 
 
         updatedDynamicHandles.push({
           id: variableName,
@@ -252,6 +252,17 @@ export const NodeFactory = ({ nodeType, id, data }) => {
   const handleDelete = () => {
       setNodes((nodes) => nodes.filter((node) => node.id !== id));
       setEdges((edges) => edges.filter((edge) => edge.source !== id && edge.target !== id));
+      
+      const [type] = id.split('-');
+
+      // Remove the ID from the store
+      useStore.setState((state) => {
+        const updatedIDs = { ...state.nodeIDs };
+        if (updatedIDs[type]) {
+          delete updatedIDs[type]; // Delete the specific node ID type
+        }
+        return { nodeIDs: updatedIDs };
+      });
     };
 
   return (

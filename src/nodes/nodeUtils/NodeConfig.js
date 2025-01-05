@@ -101,6 +101,15 @@ export const nodeConfigs = {
     {type: "source", position: "right", id: "desc", top: "70%" },
   ],
   },
+
+  SampleNode: {
+    title: "Sample Node",
+    fields: [
+      { type: "span", text:"This si the text" },
+      
+    ],
+    handles:[{ type: "source", position: "right", id: "output" , top: "50%"}],
+  }
   
 };
 

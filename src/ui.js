@@ -15,6 +15,7 @@ import { PromptNode } from './nodes/promptNode';
 import { OpenAiNode } from './nodes/openAINode';
 import { IntegrationNode } from './nodes/integrationNode';
 import { NoteNode } from './nodes/noteNode';
+import { SampleNode } from './nodes/sampleNode';
 import { CustomEdge } from './CustomEdges';
 import 'reactflow/dist/style.css';
 
@@ -33,6 +34,7 @@ const nodeTypes = {
   openAi: OpenAiNode,
   integration: IntegrationNode,
   note: NoteNode,
+  sample: SampleNode,
 };
 
 const selector = (state) => ({
